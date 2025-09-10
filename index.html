@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/6fd3cf290a.js" crossorigin="anonymous"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.toggle').click(function(e){
+        e.preventDefault();
+        $('.gnb').slideToggle();
+      })
+      $(window).on("resize",function(){ //resize 브라우저의 크기가 변경이 되면
+        let wd = $(this).outerWidth();
+        console.log(wd)
+        
+        if(wd >= 769){
+          $('.gnb').css('display','flex')
+        }else{
+          $('.gnb').css('display','none')
+        }
+      })
+
+      //로그인 버튼 클릭시 로그인폼 화면에 표시
+      $('.gnb button').click(function(){
+        $('.login').show();
+      })
+      $('.close > button').click(function(){
+        $('.login').hide();
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div class="login">
+  <div class="wrap">
+    <div class="close">
+      <button>&times;</button>
+    </div>
+    <form>
+      <p>
+      <label fot="name">사용자명 또는 이메일 주소</label>
+      <input type="text" id="name" name="name">
+      </p>
+      
+      <p>
+      <label fot="pw">암호</label>
+      <input type="pwassword" id="pw" name="pw">
+      </p>
+      <input type="submit" value="로그인">
+    </form>
+  </div>
+</div>
+  <header>
+    <nav>
+      <a class="toggle" href="#"><i class="fas fa-bars"></i></a> 
+      <div class="wrap">
+        <div class="logo"><a href="#">LOGO</a></div>
+        <ul class="gnb">
+          <li><a href="#">Buy</a></li>
+          <li><a href="#">Rent</a></li>
+          <li><a href="#">Sell</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><button type="button">Login</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="banner">
+    <h1 class="title">
+      <img src="img/title.png" alt="title">
+    </h1>
+    <div class="search">
+      <div class="wrap">
+        <p class="txt">WHAT ARE YOU LOOKING FOR?</p>
+        <p class="cog"><i class="fas fa-cog"></i></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="content">
+    <div class="wrap">
+      <article class="box">
+        <div class="pic"><img src="img/pic1.jpg" alt="pic"></div>
+        <div class="txt">
+          <h2>Contrary to popular belidf<br> Lorem Ipsum</h2>
+          <p>2 kitchens, 2 bed, 2 bath...</p>
+        </div>
+      </article>
+      <article class="box">
+        <div class="pic"><img src="img/pic2.jpg" alt="pic"></div>
+        <div class="txt">
+          <h2>Contrary to popular belidf<br> Lorem Ipsum</h2>
+          <p>2 kitchens, 2 bed, 2 bath...</p>
+        </div>
+      </article>
+      <article class="box">
+        <div class="pic"><img src="img/pic3.jpg" alt="pic"></div>
+        <div class="txt">
+          <h2>Contrary to popular belidf<br> Lorem Ipsum</h2>
+          <p>2 kitchens, 2 bed, 2 bath...</p>
+        </div>
+      </article>
+      <article class="box">
+        <div class="pic"><img src="img/pic1.jpg" alt="pic"></div>
+        <div class="txt">
+          <h2>Contrary to popular belidf<br> Lorem Ipsum</h2>
+          <p>2 kitchens, 2 bed, 2 bath...</p>
+        </div>
+      </article>
+      <article class="box">
+        <div class="pic"><img src="img/pic2.jpg" alt="pic"></div>
+        <div class="txt">
+          <h2>Contrary to popular belidf<br> Lorem Ipsum</h2>
+          <p>2 kitchens, 2 bed, 2 bath...</p>
+        </div>
+      </article>
+      <article class="box">
+        <div class="pic"><img src="img/pic3.jpg" alt="pic"></div>
+        <div class="txt">
+          <h2>Contrary to popular belidf<br> Lorem Ipsum</h2>
+          <p>2 kitchens, 2 bed, 2 bath...</p>
+        </div>
+      </article>
+      <article class="box">
+        <div class="pic"><img src="img/pic1.jpg" alt="pic"></div>
+        <div class="txt">
+          <h2>Contrary to popular belidf<br> Lorem Ipsum</h2>
+          <p>2 kitchens, 2 bed, 2 bath...</p>
+        </div>
+      </article>
+      <article class="box">
+        <div class="pic"><img src="img/pic2.jpg" alt="pic"></div>
+        <div class="txt">
+          <h2>Contrary to popular belidf<br> Lorem Ipsum</h2>
+          <p>2 kitchens, 2 bed, 2 bath...</p>
+        </div>
+      </article>
+      <article class="box">
+        <div class="pic"><img src="img/pic3.jpg" alt="pic"></div>
+        <div class="txt">
+          <h2>Contrary to popular belidf<br> Lorem Ipsum</h2>
+          <p>2 kitchens, 2 bed, 2 bath...</p>
+        </div>
+      </article>
+    </div>
+    <div class="btn"><button type="button">VIEW MPRE LISTINGS</button></div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="menu">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Policy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Appartements</a></li>
+          <li><a href="#">Houses</a></li>
+          <li><a href="#">Villas</a></li>
+          <li><a href="#">Mansions</a></li>
+          <li><a href="#">...</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">New Tork</a></li>
+          <li><a href="#">Los Anglos</a></li>
+          <li><a href="#">Miami</a></li>
+          <li><a href="#">Washington</a></li>
+          <li><a href="#">...</a></li>
+        </ul>
+      </div>
+      <div class="text">
+        <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis labore architecto ut dolores ratione eaque quasi itaque a iusto consectetur unde repellat ex veritatis obcaecati porro, tempore sapiente maxime facilis?</p>
+        <div class="icon">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#"><i class="fab fa-skype"></i></a>
+        </div>
+      </div>
+    </div>00
+    <div class="author">
+      Copyright &copy; All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>
